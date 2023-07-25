@@ -1,0 +1,92 @@
+@import url("https://fonts.googleapis.com/css2?family=Mulish:wght@400;700;900&family=Playfair+Display:wght@400;700&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    @apply font-playfair font-bold;
+  }
+
+  h1 {
+    @apply text-5xl mb-7 leading-tight;
+  }
+
+  h2 {
+    @apply text-3xl mb-7;
+  }
+
+  h3 {
+    @apply text-2xl mb-4;
+  }
+
+  h4 {
+    @apply text-xl mb-3;
+  }
+
+  h5 {
+    @apply mb-4;
+  }
+
+  small {
+    @apply text-accent uppercase tracking-widest text-[14px];
+  }
+
+  p {
+    @apply mb-4 text-stone-600;
+  }
+
+  body {
+    @apply font-mulish;
+  }
+
+  img {
+    @apply block;
+  }
+  label {
+    @apply block mb-1;
+  }
+
+  input,
+  textarea {
+    @apply resize-none border border-solid border-stone-300 px-3 py-2 outline-none;
+  }
+}
+
+@layer components {
+  .btn {
+    @apply px-3 py-2 min-w-[60px] text-center;
+  }
+
+  .btn--accent {
+    @apply bg-accent text-white;
+  }
+
+  .container {
+    @apply px-4;
+  }
+
+  .wrap > * {
+    @apply w-[70%];
+  }
+}
+
+.banner__content {
+  margin-left: 0;
+}
+
+@media screen and (min-width: 500px) {
+  .banner__content {
+    margin-left: calc((100vw - 1536px) / 2);
+  }
+}
+
+.classic__item__content h4 {
+  @apply text-base;
+}
